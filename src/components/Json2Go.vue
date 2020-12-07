@@ -1,6 +1,6 @@
 <template>
   <el-main class="Json2Go">
-    <el-row :gutter="40" style="margin-right: 0">
+    <el-row :gutter="24">
       <h2>
         <el-col :span="2" style="margin-left: 50px; color:#5daf34">
           <span style="float:right">Options:</span>
@@ -15,12 +15,12 @@
       </h2>
     </el-row>
     <el-divider></el-divider>
-    <el-row :gutter="24" style="margin:0">
+    <el-row :gutter="24">
       <el-col :span="12">
         <div class="grid-content bg-purple">
           <el-form ref="form" label-position="top" label-width="80px">
             <el-form-item label="Json">
-              <el-input type="textarea" placeholder="input sql for creating table in mysql"
+              <el-input type="textarea" placeholder="输入 Json 结构"
                         :rows="26"
                         v-model="jsonContent"></el-input>
             </el-form-item>
@@ -31,7 +31,7 @@
         <div class="grid-content bg-purple-light">
           <el-form ref="form" label-position="top" label-width="80px">
             <el-form-item label="Struct">
-              <el-input type="textarea" placeholder="data struct used in golang" :rows="26"
+              <el-input type="textarea" placeholder="Golang Struct 语句" :rows="26"
                         :value="structContent"></el-input>
             </el-form-item>
           </el-form>

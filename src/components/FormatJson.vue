@@ -1,32 +1,32 @@
 <template>
   <el-main class="Json2Go">
-    <el-row :gutter="40" style="margin-right: 0">
+    <el-row :gutter="24">
       <h2>
         <el-col :span="2" style="margin-left: 50px; color:#5daf34">
           <span style="float:right">Options:</span>
         </el-col>
 
-        <el-col :span="50">
-          <el-checkbox v-model="escapeUnicode">escapeUnicode</el-checkbox>
+        <el-col :span="20">
           <el-checkbox v-model="sortObjectKeys">sortKeys</el-checkbox>
+          <el-checkbox v-model="escapeUnicode">escapeUnicode</el-checkbox>
         </el-col>
       </h2>
     </el-row>
     <el-divider></el-divider>
 
-    <el-row :gutter="24" style="margin:0;">
+    <el-row :gutter="24" >
       <el-col :span="12">
         <div class="grid-content bg-purple">
           <el-form ref="form" label-position="top" label-width="80px">
             <el-form-item label="Json">
-              <el-input type="textarea" placeholder="input sql for creating table in mysql"
+              <el-input type="textarea" placeholder="输入 Json 语句"
                         :rows="26"
                         v-model="jsonContent"></el-input>
             </el-form-item>
           </el-form>
         </div>
       </el-col>
-      <el-col :span="12" style="height: 700px">
+      <el-col :span="12" style="height: 600px">
         <div class="grid-content bg-purple">
           <el-form ref="form" label-position="top" label-width="80px">
             <el-form-item label="Result">
@@ -42,8 +42,8 @@
 
 <script>
 /* eslint-disable */
-  import JSONEditor from "jsoneditor"
-  import 'jsoneditor/dist/jsoneditor.min.css'
+//  import JSONEditor from "jsoneditor"
+//  import 'jsoneditor/dist/jsoneditor.min.css'
 
   export default {
     name: 'FormatJson',

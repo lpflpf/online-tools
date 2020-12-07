@@ -1,5 +1,5 @@
 {
-  "name": "mytest",
+  "name": "online-tools",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "lipengfei5 <lipengfei5@360.cn>",
@@ -14,11 +14,6 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "ajv": "^6.12.6",
-    "element-ui": "^2.14.1",
-    "jsoneditor": "^9.1.4",
-    "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
