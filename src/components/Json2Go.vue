@@ -2,40 +2,33 @@
   <el-main class="Json2Go">
     <el-row :gutter="24">
       <h2>
-        <el-col :span="2" style="margin-left: 50px; color:#5daf34">
+        <!--el-col :span="2" style="margin-left: 50px; color:#5daf34">
           <span style="float:right">Options:</span>
-        </el-col>
+        </el-col-->
 
         <el-col :span="20">
-          <el-checkbox v-model="useGorm">gorm</el-checkbox>
-          <el-checkbox v-model="useJson">json</el-checkbox>
-          <el-checkbox v-model="useForm">form</el-checkbox>
-          <el-checkbox v-model="flatten">flatten</el-checkbox>
+          <el-checkbox v-model="useGorm" label="gorm" border>gorm</el-checkbox>
+          <el-checkbox v-model="useJson" label="json" border></el-checkbox>
+          <el-checkbox v-model="useForm" label="form" border></el-checkbox>
+          <el-checkbox v-model="flatten" label="flatten" border></el-checkbox>
         </el-col>
       </h2>
     </el-row>
-    <el-divider></el-divider>
-    <el-row :gutter="24">
+    <!--el-divider></el-divider-->
+    <el-row :gutter="24" style="margin-top:10px">
       <el-col :span="12">
-        <div class="grid-content bg-purple">
-          <el-form ref="form" label-position="top" label-width="80px">
-            <el-form-item label="Json">
-              <el-input type="textarea" placeholder="输入 Json 结构"
-                        :rows="26"
-                        v-model="jsonContent"></el-input>
-            </el-form-item>
-          </el-form>
-        </div>
+          <el-input type="textarea" placeholder="输入 Json 结构" :rows="32" v-model="jsonContent"></el-input>
       </el-col>
-      <el-col :span="12">
-        <div class="grid-content bg-purple-light">
+      <el-col :span="12" >
+        <el-input type="textarea" placeholder="Golang struct 语句" :rows="32" :value="structContent"> </el-input>
+        <!--div class="grid-content bg-purple-light">
           <el-form ref="form" label-position="top" label-width="80px">
             <el-form-item label="Struct">
-              <el-input type="textarea" placeholder="Golang Struct 语句" :rows="26"
+              <el-input type="textarea" placeholder="Golang Struct 语句" :rows="32"
                         :value="structContent"></el-input>
             </el-form-item>
           </el-form>
-        </div>
+        </div-->
       </el-col>
     </el-row>
   </el-main>

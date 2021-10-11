@@ -2,39 +2,25 @@
   <el-main class="Json2Go">
     <el-row :gutter="24">
       <h2>
-        <el-col :span="2" style="margin-left: 50px; color:#5daf34">
+        <!--el-col :span="2" style="margin-left: 50px;">
           <span style="float:right">Options:</span>
-        </el-col>
+        </el-col-->
 
         <el-col :span="20">
-          <el-checkbox v-model="sortObjectKeys">sortKeys</el-checkbox>
-          <el-checkbox v-model="escapeUnicode">escapeUnicode</el-checkbox>
+          <el-checkbox v-model="sortObjectKeys" label="sortKeys" border></el-checkbox>
+          <el-checkbox v-model="escapeUnicode" label="escapeUnicode" border></el-checkbox>
         </el-col>
       </h2>
     </el-row>
-    <el-divider></el-divider>
+    <!--el-divider></el-divider-->
 
-    <el-row :gutter="24" >
+    <el-row :gutter="24" style="margin-top:10px">
       <el-col :span="12">
-        <div class="grid-content bg-purple">
-          <el-form ref="form" label-position="top" label-width="80px">
-            <el-form-item label="Json">
-              <el-input type="textarea" placeholder="输入 Json 语句"
-                        :rows="26"
-                        v-model="jsonContent"></el-input>
-            </el-form-item>
-          </el-form>
-        </div>
+              <el-input type="textarea" placeholder="输入 Json 语句" :rows="32" v-model="jsonContent"></el-input>
       </el-col>
       <el-col :span="12" style="height: 600px">
-        <div class="grid-content bg-purple">
-          <el-form ref="form" label-position="top" label-width="80px">
-            <el-form-item label="Result">
               <div id="jsoneditor" v-show="jsonPatternOk"></div>
-              <el-input type="textarea" :rows="26" v-model="jsonFormat" v-show="!jsonPatternOk"></el-input>
-            </el-form-item>
-          </el-form>
-        </div>
+              <el-input type="textarea" :rows="32" v-model="jsonFormat" v-show="!jsonPatternOk"></el-input>
       </el-col>
     </el-row>
   </el-main>
@@ -51,7 +37,7 @@
       return {
         msg: '格式化json',
         jsonContent: '',
-        escapeUnicode: false,
+        escapeUnicode: true,
         sortObjectKeys: true,
         jsonPatternOk: true,
         jsonFormat: '',
