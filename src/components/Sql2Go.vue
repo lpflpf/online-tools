@@ -2,10 +2,6 @@
   <el-main class="Sql2Go">
     <el-row :gutter="24">
       <h2>
-        <!--el-col :span="2" style="margin-left: 50px;">
-          <span style="float:right">Options:</span>
-        </el-col-->
-
         <el-col :span="20">
           <el-checkbox v-model="useGorm" label="gorm" border>gorm</el-checkbox>
           <el-checkbox v-model="useJson" label="json" border>json</el-checkbox>
@@ -13,13 +9,20 @@
         </el-col>
       </h2>
     </el-row>
-    <!--el-divider></el-divider-->
-    <el-row :gutter="24" style="margin-top:10px">
+    <el-row :gutter="24" class="textareatitle">
       <el-col :span="12">
-          <el-input type="textarea" placeholder="建表语句" :rows="32" v-model="sqlContent"></el-input>
+          <h3> sql </h3>
       </el-col>
-      <el-col :span="12">
-          <el-input type="textarea" placeholder="Golang Struct 语句" :rows="32" :value="structContent"></el-input> </el-col>
+      <el-col :span="12" >
+          <h3>go struct</h3>
+      </el-col>
+    </el-row>
+    <el-row :gutter="24" >
+      <el-col :span="12" style="padding:0;">
+          <el-input type="textarea" placeholder="建表语句" :rows="32" v-model="sqlContent" class="leftinput"></el-input>
+      </el-col>
+      <el-col :span="12" style="padding:0;">
+          <el-input type="textarea" placeholder="Golang Struct 语句" :rows="32" :value="structContent" class="rightinput"></el-input> </el-col>
       </el-col>
     </el-row>
   </el-main>
@@ -138,3 +141,21 @@
     }
   }
 </script>
+
+<style>
+.leftinput textarea {
+    background: aliceblue;
+}
+
+.rightinput textarea {
+    background: beige;
+}
+
+.textareatitle h3{
+    margin: 0;
+    text-align:center;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+</style>

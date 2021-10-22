@@ -2,9 +2,6 @@
   <el-main class="Json2Go">
     <el-row :gutter="24">
       <h2>
-        <!--el-col :span="2" style="margin-left: 50px;">
-          <span style="float:right">Options:</span>
-        </el-col-->
 
         <el-col :span="20">
           <el-checkbox v-model="sortObjectKeys" label="sortKeys" border></el-checkbox>
@@ -12,11 +9,19 @@
         </el-col>
       </h2>
     </el-row>
-    <!--el-divider></el-divider-->
 
-    <el-row :gutter="24" style="margin-top:10px">
+    <el-row :gutter="24" class="textareatitle">
       <el-col :span="12">
-              <el-input type="textarea" placeholder="输入 Json 语句" :rows="32" v-model="jsonContent"></el-input>
+          <h3> Json</h3>
+      </el-col>
+      <el-col :span="12" >
+          <h3> Result</h3>
+      </el-col>
+    </el-row>
+
+    <el-row :gutter="24" style="padding:0;">
+      <el-col :span="12">
+              <el-input type="textarea" placeholder="输入 Json 语句" :rows="32" v-model="jsonContent" class="leftinput"></el-input>
       </el-col>
       <el-col :span="12" style="height: 600px">
               <div id="jsoneditor" v-show="jsonPatternOk"></div>
